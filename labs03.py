@@ -1,4 +1,4 @@
-def conversation() :
+def conversation():
     print("Do you like coding in python? Answer yes or no")
     answer = input()
     if answer == "yes"
@@ -7,7 +7,7 @@ def conversation() :
         print("Perhaps you will change your mind")    
     print("Goodbye")    
 
-def main() :
+def main():
     print("Welcome to my conversation program")    
     conversation()
     print("Thanks for chatting with me")
