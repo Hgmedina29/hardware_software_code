@@ -1,0 +1,21 @@
+def main():
+	print("Hello, I would like to get to know a little about you.")
+	print("Please answer a few brief questions.")
+	print("What is your name?")
+	name= input()
+	print("{}, What college are you attending?".format(name))
+	college = input()
+	print("{}, What high school did you attend?".format(name))
+	highschool = input()
+	print("Which institution is more fun?")
+	institution= input()
+	print("Cool!")
+	print("It was nice to speak with you, {}".format(name))
+	print("You are currently attending {}".format(college))
+	print("You also think {} is more fun".format(institution))
+	print("I learned that the high school you attended was {}".format(highschool))
+	print("It was fun getting to know a little bit about you.")
+	print("Let's do this again!")
+
+if __name__== "__main__":
+    main()
