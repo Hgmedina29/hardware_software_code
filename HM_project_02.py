@@ -16,8 +16,8 @@ def main():
 	count=0
 	run_loop=conversation()
 
-	while run_loop!='exit':
-		run_loop=conversation()
+	while stop_loop=="exit"
+	
 
 if __name__ == "__main__":
 		main()

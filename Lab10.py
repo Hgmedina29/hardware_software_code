@@ -8,6 +8,6 @@ def main():
 
 	print("{}+{}={}".format(num1,num2,total))
 
-if __name__=="__main__":
+if __name__ == "__main__":
 	main()
 	

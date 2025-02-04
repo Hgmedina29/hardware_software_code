@@ -4,8 +4,9 @@ def print_lyrics():
 
 def repeat_lyrics(count=1):
   for number in range(count):
-  	   print("{}############".format(2),end=".")
-  	   print_lyrics()
+    print("{}".format(number))
+    print_lyrics()
+  print("Done Repeating!!")
   print("#############")
 
 def main():
