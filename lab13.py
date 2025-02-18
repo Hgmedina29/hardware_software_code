@@ -11,11 +11,11 @@ def get_largest(largest,value):
 def main():
   stop_loop="no"
   greeting()
-  while stop_loop!="yes":
-   num1=int(input("Enter first number:"))
-   num2=int(input("Enter second number:"))
-   get_largest(numb1,num2)
-   stop_loop=input("Type'yes'to exit program:").lower().strip()
+    while stop_loop!="yes":
+    num1=int(input("Enter first number:"))
+    num2=int(input("Enter second number:"))
+    get_largest(numb1,num2)
+    stop_loop=input("Type'yes'to exit program:").lower().strip()
 
 if __name__=="__main__":
   main()
