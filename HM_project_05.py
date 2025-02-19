@@ -2,31 +2,42 @@ def greetings():
 
 	print("This program adds two numbers.")
 	
+	
 def add_numbers(num1,num2):
 	
 	total = int(num1) + int(num2)
 	return total
-	print("Type 'yes' to end program:")
 
-if __name__=="__main__":
+def main():
+
+	greetings()
 	while True:
-		greetings()
 		num1=input("Enter first number:")
-		print("{} is a good number!".format(num1))
 		if num1=='yes':
 			print("Goodbye!")
 			print("Come back when you want to add more numbers")
 			break
+		if num1.isnumeric():
+			print("{} is a good number".format(num1))
 		else:
 			print("Invalid number, Try again!")
+		 		# num1=input("Enter first number:")
 		num2=input("Enter Second number:")
-		print("Let's do some adding!")
 		if num2=='yes':
 			print("Goodbye!")
 			print("Come back when you want to add more numbers!")
 			break
 		if num1.isnumeric() and num2.isnumeric():
+			print("Let's do some adding!")
 			print(add_numbers(num1,num2))
 		else:
 			print("Invalid number, Try again!")
+		 		# num2=input("Enter second number:")
+		answer=input("Type 'yes' to end program:")
+		if answer=='yes':
+			print("Goodbye!")
+			print("Come back when you want to add more numbers!")
+			break
 
+if __name__=="__main__":
+	main()
