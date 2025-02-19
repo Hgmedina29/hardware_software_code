@@ -17,6 +17,8 @@ if __name__=="__main__":
 			print("Goodbye!")
 			print("Come back when you want to add more numbers")
 			break
+		else:
+			print("Invalid number, Try again!")
 		num2=input("Enter Second number:")
 		print("Let's do some adding!")
 		if num2=='yes':
