@@ -1,67 +1,69 @@
-# def get_menu_option():
-	
-# 	menu_options=('1' , '2')
+def binary_to_decimal(binary):
+    result = 0
+    power = len(binary) - 1
+    for digit in binary:
+        result += int(digit) * (2 ** power)
+        power -= 1
+    return result
 
-# 	while True:
-# 		print()
-# 		print('Choose the following number conversions')
-# 		print('(1) binary to decimal')
-# 		print('(2) decimal to binary')
+def decimal_to_binary(number):
+    remainder = []
+    while number > 0:
+        remainder.append(str(number % 2))
+        number = number // 2
+    return ''.join(remainder[::-1])
 
-# 		print()
-# 		user_input=input()
+def show_menu():
+    print("Choose the following number conversion:")
+    print("(1) Binary to Decimal")
+    print("(2) Decimal to Binary")
+    return input("Selection: ")
 
-# 		if user_input in menu_options:
-# 			return user_input
+def handle_binary_to_decimal():
+    print("Converting Binary to Decimal")
+    print("['0', '1'] are valid numbers")
+    binary = input("Enter a valid binary number: ")
+    if all(c in "01" for c in binary):  
+        print("Decimal:", binary_to_decimal(binary))
+        input("Hit 'Enter' to continue")
+        exit_prompt = input("Type 'yes' to end program or press Enter to continue: ")
+        if exit_prompt.lower() == 'yes':
+            print("Goodbye!")
+            return True  # Returning True to exit the program
+    else:
+        print("Invalid binary number.")
+    return False  # Continue program if input is invalid
 
-# 		else:
-# 			print()
-# 			print('Invalid selection, Try again!')
-# 	# if user_input=='1':
-# 	# 	print()
-#     	# result=0
-#     	# if len(binary)>0:
-#     	# 	power=len(str(binary))-1 
-#     	# 	for num in str(binary):
-#     	# 		result+=int(num)*2**power
-#     	# 		power-=1	
-#        	# 	return result
-
-
-def greetings():
-
-	print("This program adds two numbers.")
-	
-def add_numbers(num1,num2):
-	
-	total = int(num1) + int(num2)
-	return total
+def handle_decimal_to_binary():
+    print("Converting Decimal to Binary")
+    print("['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] are valid numbers")
+    try:
+        decimal = int(input("Enter a valid decimal number: ")) 
+        print("Binary:", decimal_to_binary(decimal))
+        input("Hit 'Enter' to continue")
+        exit_prompt = input("Type 'yes' to end program or press Enter to continue: ")
+        if exit_prompt.lower() == 'yes':
+            print("Goodbye!")
+            return True  # Returning True to exit the program
+    except ValueError:
+        print("Invalid decimal number.")
+    return False  # Continue program if input is invalid
 
 def main():
+    while True:
+        user_input = show_menu()
+        if user_input == "1":
+            if handle_binary_to_decimal():
+                break  # Exit the loop and the program if 'yes' is typed
+        elif user_input == "2":
+            if handle_decimal_to_binary():
+                break  # Exit the loop and the program if 'yes' is typed
+        else:
+            print("Invalid selection, Try again!")
 
-	greetings()
-		num1=int(input("Enter first number:"))
-		while num1!=integer():
-			print("{} is a good number".format(num1))
-			break
-		else:
-			print("Invalid number, Try again!")
-	
-			# print()
-		# num2=input("Enter Second number:")
-		# if num1.isnumeric() and num2.isnumeric():
-		# 	print("Let's do some adding!")
-		# 	print(add_numbers(num1,num2))
-		# 	break
-		# else:
-		# 	print("Invalid number, Try again!")
+if __name__ == "__main__":
+    main()
 
-		# 	print()
-		# answer=input("Type 'yes' to end program:")
-		# if answer=='yes':
-		# 	print("Goodbye!")
-		# 	print("Come back when you want to add more numbers!")
-		# 	break
 
-if __name__=="__main__":
-	main()
+
+
