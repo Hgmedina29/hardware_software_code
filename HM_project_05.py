@@ -22,9 +22,10 @@ def main():
 
 		num2=input("Enter Second number:")
 		if num1.isnumeric() and num2.isnumeric():
+			print("{} is a good number".format(num2))
 			print("Let's do some adding!")
 			print(add_numbers(num1,num2))
-			
+
 		else:
 			print("Invalid number, Try again!")
 			continue
